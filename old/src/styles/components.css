@@ -1,0 +1,670 @@
+/* src/styles/components.css */
+@import './variables.css';
+
+/* ======= Layout Components ======= */
+
+/* Main content container - use this for all pages */
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    margin-left: var(--sidebar-width);
+    /* overflow: hidden; */ /* Prevent scrolling at this level */
+    padding: 0 var(--container-right-padding) 0 var(--container-left-padding);
+}
+
+/* Page container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height) - 100px); /* Adjusted to account for pagination and footer */
+    /* overflow: hidden; */
+    padding-bottom: 100px; /* Increased padding for pagination */
+    width: 100%;
+}
+
+/* ======= Metrics Grid ======= */
+/* .metrics-grid { */
+/*     display: grid; */
+/*     gap: var(--spacing-md); */
+/*     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+/*     margin: var(--spacing-md) 0; */
+/*     width: 100%; */
+/* } */
+
+/* Metric Card */
+/* .metric-card { */
+/*     align-items: center; */
+/*     background-color: rgba(0, 0, 0, 0.6) !important; */
+/*     border: 1px solid var(--primary); */
+/*     border-radius: 8px; */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     justify-content: center; */
+/*     min-height: 100px; */
+/*     padding: var(--spacing-md) var(--spacing-sm); */
+/*     text-align: center; */
+/*     transition: transform 0.2s ease, box-shadow 0.2s ease; */
+/*     animation: glowPulse 10s infinite; */
+/*     position: relative; */
+/* } */
+
+/* .metric-card:hover { */
+/*     border-color: var(--primary); */
+/*     box-shadow: 0 4px 8px rgba(0, 229, 153, 0.2); */
+/*     transform: translateY(-2px); */
+/* } */
+
+/* .metric-title { */
+/*     color: var(--text-primary); */
+/*     font-size: 14px; */
+/*     font-weight: 500; */
+/*     margin-bottom: var(--spacing-xs); */
+/* } */
+
+/* .metric-value { */
+/*     color: var(--primary); */
+/*     font-size: 28px; */
+/*     font-weight: 700; */
+/*     margin: var(--spacing-sm) 0; */
+/* } */
+
+/* .metric-description { */
+/*     color: var(--text-secondary); */
+/*     font-size: 12px; */
+/* } */
+
+/* Table container with softer corners */
+.table-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px; /* Softer corners */
+    margin-bottom: var(--spacing-lg);
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+.table-header {
+    align-items: center;
+    background-color: rgba(18, 27, 29, 0.2);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.table-header h2 {
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.table-content {
+    overflow-y: auto !important;
+    scroll-snap-type: y mandatory;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* Data table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* border: 1px solid var(--primary); */ /* Remove the solid border */
+    border: none !important;
+    animation: glowPulse 10s infinite;
+    box-shadow: 0 0 15px rgba(0, 163, 204, 0.6); /* Subtle glow */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.data-table th {
+    background-color: var(--table-header-bg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.data-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Higher z-index to ensure it stays above content */
+    background-color: #2a2a2a;
+}
+
+.data-table thead th {
+    background-color: var(--table-header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table thead tr {
+    height: 40px;
+}
+
+.data-table tr {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    scroll-snap-align: start;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.data-table td {
+    border-bottom: 1px solid var(--border-color);
+    /* overflow: hidden; */
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+}
+
+.data-table tr:hover {
+    background-color: rgba(0, 163, 204, 0.12);
+}
+
+/* Make sure the table container allows for the border */
+.table-content {
+    flex: 1 1 auto;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    position: relative;
+    border: none; /* Ensure no extra borders */
+}
+
+/* Update programs-table to not interfere with the border */
+.programs-table {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: calc(100vh - var(--header-height) - 200px);
+    margin-bottom: 60px;
+    /* overflow: hidden; */
+    border: none; /* Remove any interfering borders */
+}
+
+/* ======= Form Elements ======= */
+.search-bar {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-xs) 0;
+}
+
+/* Search input */
+.search-input {
+    height: 36px;
+    padding: 0 var(--spacing-md);
+    border: 1px solid var(--primary); /* Update to cyan */
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 196, 255, 0.2); /* Update to cyan */
+    outline: none;
+}
+
+/* ======= Buttons ======= */
+.btn {
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 500;
+    height: 38px;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 229, 153, 0.1);
+}
+
+/* Action buttons */
+.action-btn {
+    background-color: rgba(168, 85, 247, 0.1); /* Purple background */
+    border: 1px solid var(--action-color);
+    border-radius: 4px;
+    color: var(--action-color);
+    cursor: pointer;
+    height: 30px;
+    padding: 0 var(--spacing-md);
+    transition: all 0.2s;
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+.action-btn:hover {
+    background-color: rgba(168, 85, 247, 0.2);
+    border-color: var(--action-color);
+    box-shadow: 0 0 5px var(--action-color);
+    color: var(--action-color);
+}
+
+/* ======= Status Badges ======= */
+.status-badge {
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 8px;
+}
+
+/* Status badges */
+.status-active, .status-yes {
+    background-color: rgba(45, 212, 191, 0.1); /* Teal background */
+    border: 1px solid var(--status-yes);
+    color: var(--status-yes);
+}
+
+.status-inactive, .status-no {
+    background-color: transparent !important;
+    border: 1px solid var(--status-no);
+    color: var(--status-no);
+}
+
+/* ======= Pagination ======= */
+/* Pagination */
+.pagination {
+    align-items: center;
+    background-color: var(--background);
+    bottom: 40px;
+    display: flex;
+    gap: var(--spacing-md);
+    height: 40px;
+    justify-content: space-between;
+    left: calc(var(--sidebar-width) + var(--container-left-padding));
+    padding: 0 var(--spacing-md);
+    position: fixed;
+    right: var(--container-right-padding);
+    z-index: 90;
+    margin-bottom: 30px; /* Increased spacing */
+}
+
+/* Pagination buttons */
+.pagination-btn {
+    background: linear-gradient(0deg, #000000, #2F3738);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    color: #E0E0E0;
+    font-weight: bold;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 163, 204, 0.3);
+}
+
+.pagination-btn:not(:disabled) {
+    background: linear-gradient(0deg, #000000, #2F3738);
+    border: 1px solid var(--primary); /* Cyan border */
+    color: #E0E0E0; /* White text */
+}
+
+.pagination-btn:disabled {
+    background: #000000;
+    border: 1px solid #7f7f7f;
+    color: #7f7f7f;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.page-info {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.per-page-selector {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--spacing-sm);
+    margin-left: auto;
+    width: auto;
+}
+
+/* Style the per-page select */
+.per-page-select {
+    /* background-color: var(--border-color); */
+    background-color: #000000 !important; /* Force black background */
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    color: var(--text-primary);
+    padding: 6px 8px;
+    width: 70px; /* Increased width to fit "100" */
+}
+
+.per-page-select:focus {
+    /* background-color: var(--border-color); */
+    background-color: #000000 !important; /* Force black background */
+    border-color: var(--primary-hover);
+    box-shadow: 0 0 0 2px rgba(0, 163, 204, 0.2); /* Updated to cyan */
+    outline: none;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .pagination {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        height: auto; /* Allow height to adjust */
+        padding: var(--spacing-sm);
+    }
+
+    .per-page-selector {
+        margin-left: 0;
+        margin-top: var(--spacing-xs);
+    }
+}
+
+/* ======= Modals ======= */
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    margin: 100px auto;
+    max-width: 500px;
+    padding: var(--spacing-lg);
+    position: relative;
+    width: 90%;
+}
+
+.modal-close {
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    right: var(--spacing-md);
+    top: var(--spacing-md);
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
+}
+
+/* ======= Form Groups ======= */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Form group inputs */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    background-color: rgba(8, 10, 15, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    padding: var(--spacing-sm);
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary); /* Update to cyan */
+    box-shadow: 0 0 0 2px rgba(0, 196, 255, 0.2); /* Update to cyan */
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-end;
+    margin-top: var(--spacing-lg);
+}
+
+/* ======= Animation ======= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+    align-items: center;
+    background-color: var(--background);
+    border-top: 1px solid var(--border-color);
+    bottom: 0;
+    color: var(--text-secondary);
+    display: flex;
+    font-size: 12px;
+    height: 40px;
+    justify-content: space-between; /* Keep copyright on left, version on right */
+    left: var(--sidebar-width);
+    padding: 10px var(--container-left-padding);
+    position: fixed;
+    right: 0;
+    z-index: 10;
+}
+
+/* Add a version class to align with Per page */
+.version {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-right: var(--container-right-padding); /* Align with the right edge of pagination */
+}
+
+/* ~/my/codes/deeplike/src/styles/components.css */
+.suite-dropdown {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.suite-dropdown select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.table-wrapper {
+    /* Remove any border from the wrapper */
+    border: none !important;
+    animation: glowPulse 10s infinite;
+    /* overflow: hidden; */
+}
+
+/* Remove border from header and header-tabs */
+.header, .header-tabs {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove border and box-shadow from table and wrapper */
+/* .data-table, .table-wrapper, .programs-table, .table-container {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+} */
+
+/* Tab font size and alignment */
+.header-tabs .header-tab {
+    font-size: 14px !important;
+    padding: 10px 24px !important;
+    margin: 0 !important;
+}
+.header-tabs {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Remove border from any table container */
+/* .programs-table, .table-container, .data-table, .table-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+} */
+
+/* Search input field style */
+.filter-input, .search-input {
+    background: #181c20 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
+}
+
+.filter-input:focus, .search-input:focus {
+    outline: none !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(0, 135, 169, 0.2) !important;
+}
+
+.tab-content.active .programs-table, .tab-content.active .programs-table .table-content, .tab-content.active .programs-table .data-table {
+    background: transparent !important;
+}
+
+.ignore-btn {
+    background: transparent;
+    color: #ff9800;
+    border: 1.5px solid #ff9800;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.ignore-btn:hover, .ignore-btn:focus {
+    background: rgba(255, 152, 0, 0.15);
+    color: #ff9800;
+    border-color: #ff9800;
+    outline: none;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    min-width: 220px !important;
+    width: 220px !important;
+    max-width: 220px !important;
+}
+
+/* CSV Import Modal Styles */
+.csv-upload-modal-body {
+    padding: 24px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.csv-upload-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.csv-upload-input-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.csv-upload-filename {
+    font-size: 13px;
+    color: #8fd4ff;
+    opacity: 0.85;
+}
+
+.csv-upload-error {
+    margin-top: 12px;
+    background: #2a1a1a;
+    color: #ff6b6b;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.csv-preview {
+    margin-top: 18px;
+}
+
+.csv-preview-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+
+.csv-preview-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 8px;
+    background: #181c20;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.csv-preview-table th,
+.csv-preview-table td {
+    border: 1px solid #333;
+    padding: 6px 12px;
+    text-align: left;
+}
+
+.csv-preview-table th {
+    background: #1a2a3a;
+    color: #fff;
+    font-weight: 700;
+}
+
+.csv-preview-more {
+    margin-top: 6px;
+    color: #aaa;
+}
+
+.csv-import-btn {
+    margin-top: 16px;
+    align-self: flex-end;
+}
+
+.csv-import-result {
+    margin-top: 18px;
+}

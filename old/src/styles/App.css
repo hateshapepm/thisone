@@ -1,0 +1,60 @@
+/* ~/my/codes/deeplike/src/styles/App.css */
+.app {
+    background-color: #0d0d0d;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    left: 0;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    position: fixed; /* Force the app container to the top */
+    right: 0;
+    top: 0;
+    width: 100vw; /* Use viewport width to ensure full width */
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    min-height: 0;
+    /* overflow: hidden; */
+    padding: 0;
+    width: 100%;
+}
+
+.btn {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    padding: 8px 16px;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e05a1b;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

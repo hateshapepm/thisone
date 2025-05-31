@@ -1,0 +1,69 @@
+/* src/styles/variables.css */
+:root {
+    /* background */
+    --background: #000000;
+    --card-bg: #161b22;
+    --table-header-bg: #21262d;
+    --primary: #04634b;
+    --primary-hover: #0088AA;
+    --action-color: #00FF66;
+    --action-hover: #00CC52;
+
+    /* action buttons */
+    --action-info-1: #00BFFF;
+    --info-box-shadow-1: 0 0 10px rgba(0, 191, 255, 0.5);
+
+    --action-info-2: #00FFFF;
+    --info-box-shadow-2: 0 0 10px rgba(0, 255, 255, 0.5);
+
+    --action-edit-1: #FF6600;
+    --edit-box-shadow-1: 0 0 10px rgba(255, 102, 0, 0.5);
+
+    --action-edit-2: #FF5E00;
+    --edit-box-shadow-2: 0 0 10px rgba(255, 94, 0, 0.5);
+
+    --action-delete-1: #FF0033;
+    --delete-box-shadow-1: 0 0 10px rgba(255, 0, 51, 0.5);
+
+    --action-delete-2: #FF1744;
+    --delete-box-shadow-2: 0 0 10px rgba(255, 23, 68, 0.5);
+
+    /* other buttons */
+    --status-yes: #00FF66;
+    --status-no: #FF3333;
+
+    /* padding */
+    --container-left-padding: 20px;
+    --container-right-padding: 16px;
+    --table-cell-padding: 8px 16px;
+
+    /* text colors */
+    --text-primary: #E6E6E6;
+    --text-secondary: #919e8b;
+
+    /* misc colors */
+    --border-color: #30363d;
+    --hyperlinks: #38BDF8;
+    --metrics: #4FD1C5;
+
+    /* sidebar */
+    --nav-button: #0b2e3b;
+    --sidebar-bg: #161b22;
+    --sidebar-width: 250px;
+
+    /* heights */
+    --header-height: 56px;
+
+    /* spacing */
+    --spacing-xl: 32px;
+    --spacing-lg: 24px;
+    --spacing-md: 16px;
+    --spacing-sm: 8px;
+    --spacing-xs: 4px;
+
+    /* transitions */
+    --transition-speed: 0.2s;
+
+    --program-svg: 16px;
+
+}

@@ -1,0 +1,8 @@
+asn,Autonomous system number data
+ipcidr,IP block and CIDR range info
+multi,Multi information types returned
+misc,Misc information returned
+rdap,Registration data access protocol
+subdomain,Subdomain enumeration results
+web,General website or page data
+whois,Domain registration records

@@ -1,0 +1,28 @@
+1,asnmap,https://github.com/projectdiscovery/asnmap,map org network ranges via ASN,1,1,1,2025-05-02 12:30:08
+1,asnlookup,https://www.asnlookup.com,ASN lookup and network information,1,1,1,2025-05-02 12:30:08
+1,radb,whois.radb.net,Routing registry for ASNs and IPs,0,1,1,2025-05-02 12:30:08
+1,spyonweb,https://www.spyonweb.com,Website and IP analytics,1,0,0,2025-05-02 12:30:08
+2,ipinfo,https://ipinfo.io/widget/demo,IP geolocation and network data,1,1,1,2025-05-02 12:30:08
+2,robtex,https://www.robtex.com,IP, domain, and network analysis,1,1,1,2025-05-02 12:30:08
+3,he,https://bgp.he.net,BGP and ASN information,1,1,1,2025-05-02 12:30:08
+3,bgptools,https://bgp.tools,BGP and routing analysis,1,1,1,2025-05-02 12:30:08
+3,dmarclive,https://dmarc.live,DMARC and email security checks,1,1,1,2025-05-02 12:30:08
+4,namecheap,https://www.namecheap.com/domains/registration/results,Domain registration and lookup,1,1,0,2025-05-02 12:30:08
+4,netlas_dl,https://app.netlas.io/api/domains/download/,Domain data download API,1,1,0,2025-05-02 12:30:08
+5,apnic_rdap,https://rdap.apnic.net,APNIC RDAP for IP and ASN,1,1,1,2025-05-02 12:30:08
+5,arin_rdap,https://rdap.arin.net,ARIN RDAP for IP and ASN,1,1,1,2025-05-02 12:30:08
+5,ripe_rdap,https://rdap.db.ripe.net,RIPE RDAP for IP and ASN,1,1,1,2025-05-02 12:30:08
+6,c99,api.c99.nl,Subdomain and DNS lookup API,0,1,1,2025-05-02 12:30:08
+6,elmasy,https://columbus.elmasy.com,Subdomain enumeration tool,1,1,1,2025-05-02 12:30:08
+6,merklemap,https://api.merklemap.com,Domain and DNS intelligence API,1,1,1,2025-05-02 12:30:08
+6,netlas,https://app.netlas.io,Network and domain reconnaissance,1,1,0,2025-05-02 12:30:08
+6,rapiddns,https://rapiddns.io,DNS and subdomain lookup,1,1,1,2025-05-02 12:30:08
+6,seckrd,https://seckrd.com/subdomain-finder.php,Subdomain discovery tool,1,1,1,2025-05-02 12:30:08
+6,shrewdeye,https://shrewdeye.app,Domain and subdomain analysis,1,1,1,2025-05-02 12:30:08
+8,ipip,https://whois.ipip.net,IP and domain WHOIS lookup,1,1,1,2025-05-02 12:30:08
+8,iqwhois,https://iqwhois.com,WHOIS and domain information,1,1,1,2025-05-02 12:30:08
+8,statscrop,https://www.statscrop.com,Website statistics and analysis,1,1,1,2025-05-02 12:30:08
+8,viewdnsinfo,https://viewdns.info,DNS and domain tools,1,1,1,2025-05-02 12:30:08
+8,webinformer,https://website.informer.com,Website and domain insights,1,1,1,2025-05-02 12:30:08
+8,who_is,https://who.is/whois,Domain WHOIS lookup,1,1,0,2025-05-02 12:30:08
+8,whoxy,https://www.whoxy.com,WHOIS and domain history,1,1,1,2025-05-02 12:30:08

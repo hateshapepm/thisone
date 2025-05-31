@@ -1,0 +1,91 @@
+.toggle-buttons button {
+    background: none;
+    border: none;
+    color: #00e599;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.toggle-buttons button:hover {
+    color: #fff;
+}
+
+.toggle-buttons button[style*="font-weight: bold"] {
+    color: #fff; /* Highlight active button */
+}
+
+.toggle-panel {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.toggle-panel > div {
+    flex: 1 1 auto; /* Allow the content div to grow and shrink */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.toggle-panel .navigation-buttons {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+.toggle-panel .content {
+    background-color: #0d0d0d;
+    color: #fff;
+    flex-grow: 1; /* Ensure content takes remaining space */
+    padding: 20px;
+}
+
+.toggle-panel .navigation-buttons button {
+    background: none;
+    border: none;
+    color: #00e599;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.toggle-panel .navigation-buttons button:hover {
+    color: #fff;
+}
+
+.toggle-panel .navigation-buttons button[style*="font-weight: bold"] {
+    color: #fff; /* Highlight active button */
+}
+
+.navigation-buttons {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+.navigation-buttons button {
+    background: none;
+    border: none;
+    color: #00e599;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navigation-buttons button:hover {
+    color: #fff;
+}
+
+.navigation-buttons button[style*="font-weight: bold"] {
+    color: #fff; /* Highlight active button */
+}
+
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0; /* Remove padding to match Programs.jsx */
+}

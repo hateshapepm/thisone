@@ -1,0 +1,271 @@
+/* ~/my/codes/deeplike/src/styles/Header.css */
+@import './components.css';
+
+.tab {
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    color: #00e599;
+    padding: 5px 10px;
+}
+
+.tab.active {
+    background-color: #00e599;
+    color: #000000;
+}
+
+/* Sidebar text */
+.sidebar a, .sidebar span {
+    color: var(--text-secondary); /* Updated secondary text color */
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sidebar-header {
+    /* align-items: center; */
+    border-bottom: 1px solid #1E222A;
+    display: flex;
+    height: 56px;
+    padding: 0 2px 4px 12px;
+}
+
+.sidebar-logo {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+}
+
+.sidebar-logo .sidebar-logo-text {
+    color: var(--primary) !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 !important;
+}
+
+/* Header */
+.header {
+    /* align-items: center; */
+    background-color: var(--background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #c9d1d9;
+    display: flex;
+    height: var(--header-height);
+    justify-content: space-between;
+    left: var(--sidebar-width);
+    padding: var(--spacing-xs) var(--container-right-padding) var(--spacing-xs) var(--container-left-padding);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(100% - var(--sidebar-width));
+    z-index: 100;
+    overflow-x: auto;
+    white-space: nowrap;
+    backdrop-filter: none;
+}
+
+/* Align logo and tabs */
+.header-left {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+    flex-shrink: 0;
+}
+
+/* Ensure logo is visible */
+.header-logo {
+    color: #00E599;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: var(--spacing-sm);
+}
+
+/* Tabs container */
+.top-header .tabs {
+    align-items: center;
+    border-bottom: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+/* Ensure tabs are visible */
+.top-header .tab {
+    align-items: center;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #E0E0E0;
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    height: 100%;
+    padding: 0 var(--spacing-md);
+    text-shadow: 0 0 3px rgba(0, 163, 204, 0.2);
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.top-header .tab.active {
+    background-color: transparent;
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
+    text-shadow: 0 0 5px rgba(0, 163, 204, 0.3);
+}
+
+/* Revert sidebar to extend to the top */
+.sidebar {
+    background: linear-gradient(to bottom, #0A0E14, #0D1117, #0A0E14);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 163, 204, 0.1);
+    height: 100vh; /* Extend to the top */
+    left: 0;
+    overflow-y: auto;
+    padding: 20px;
+    position: fixed;
+    top: 0; /* Start at the top */
+    width: var(--sidebar-width);
+    z-index: 200;
+}
+
+.nav-list-item {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-section {
+    margin-top: 8px;
+    padding: 0 12px;
+}
+
+/* Navigation items */
+.navigation-section .nav-item {
+    align-items: center;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    padding: 8px 20px 8px 24px;
+    position: relative;
+    transition: all 0.2s;
+    width: 100%;
+    text-shadow: 0 0 3px rgba(0, 163, 204, 0.2);
+}
+
+.navigation-section:first-child {
+    margin-top: 2px;
+}
+
+.navigation-section:nth-child(2) {
+    margin-top: 0;
+}
+
+.navigation-section-title {
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 2px;
+    text-transform: uppercase;
+}
+
+/* Hover state */
+.navigation-section .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.navigation-section .nav-item:hover::before {
+    background-color: #00E599;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+
+.navigation-section .nav-item::before {
+    transition: width 0.2s ease;
+}
+
+/* Active state */
+.navigation-section .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00E599;
+}
+
+.navigation-section .nav-item.active::before {
+    background-color: #00E599;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+
+/* 0A0E14FF */
+
+/* Hover and active states */
+.navigation-section .nav-item:hover,
+.navigation-section .nav-item.active {
+    background-color: var(--nav-button);
+    color: var(--primary);
+    box-shadow: 0 0 5px rgba(0, 163, 204, 0.3);
+    text-shadow: 0 0 3px rgba(0, 163, 204, 0.2);
+    padding: 8px 20px 8px 24px; /* Maintain padding on hover/active */
+}
+
+/* Hover bar */
+.navigation-section .nav-item:hover::before,
+.navigation-section .nav-item.active::before {
+    background-color: var(--primary); /* Cyan bar */
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 3px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-icon {
+    display: flex;
+    margin-right: 12px;
+}
+
+.main-content {
+    margin-left: 250px;
+    margin-top: 56px;
+    padding: 24px;
+}

@@ -1,0 +1,6 @@
+1,active
+0,inactive: unknown
+-1,inactive: no longer exists
+-2,inactive: filetypes not supported
+-3,inactive: expired invite link
+-9,inactive: duplicate file/guid in secondary channel
